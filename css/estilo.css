@@ -303,7 +303,7 @@ color: #f0e222;
 
 /* SECCIÓN SOBRE MÍ */
 .sobremi {
-background: #070505;
+background: #2e2121;
 padding: 50px 0;
 box-shadow: 0 0 15px rgb(0 0 0 / 0.05);
 border-radius: 8px;
@@ -445,96 +445,111 @@ font-size: 1.2rem;
 
 
 /* SECCIÓN SKILLS */
+/* 🎨 Fondo general oscuro y elegante */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #f0f0f0;
+  background: linear-gradient(135deg, #0b0b0b, #1a1a1a);
+  margin: 0;
+  padding: 0;
+}
+
+/* 📦 Contenedor principal de skills */
 .skills-bar {
   max-width: 500px;
-  margin: auto;
-  background: #e5e6f1; /* Color de fondo único */
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(226, 219, 219, 0.1);
+  margin: 40px auto; /* Separación extra de otras secciones */
+  background: linear-gradient(145deg, #1d1d1d, #272727);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 1.2s ease;
 }
 
-/* Título centrado */
+/* 📌 Encabezado del contenedor */
+.skills-header {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b); /* Rosa → Rojo vibrante */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5);
+}
+
+.skills-header h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+/* 📝 Títulos */
 .skills-bar h3 {
   text-align: center;
-  display: block;
-  margin: 0 auto 25px auto;
-  color: #0f0a0a;
+  margin: 0 auto 20px auto;
+  color: #fdfdfd;
+  font-size: 1.3em;
 }
 
+/* 🧩 Items de skills */
 .skill-item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .skill-item span {
   font-weight: bold;
   display: block;
-  margin-bottom: 5px;
-  color: #161515;
+  margin-bottom: 6px;
+  color: #f1f1f1;
 }
 
 .skill-item i {
-  color: #480575;
+  color: #ff9ff3;
   margin-right: 8px;
 }
 
+/* 📊 Barra de progreso */
 .progress-bar {
-  background: #ac8383;
+  background: #2c2c2c;
   border-radius: 20px;
   overflow: hidden;
-  height: 25px;
+  height: 26px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #6d9206, #1e6775);
-  color: rgb(160, 106, 106);
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
   font-size: 12px;
   font-weight: bold;
+  color: #fff;
   text-align: right;
   padding-right: 10px;
   border-radius: 20px;
-  line-height: 25px;
+  line-height: 26px;
   transition: width 1s ease-in-out;
 }
 
-
-
-/* Título principal centrado */
+/* 📍 Título principal */
 .section-title {
   text-align: center;
   font-size: 1.8em;
   font-weight: bold;
-  color: #f1e8e8;
-  margin-bottom: 25px; /* separación con el contenido */
+  color: #ffffff;
+  margin-bottom: 25px;
 }
 
-/* Separación para "Otros" */
-h3.section-title:last-of-type {
-  margin-top: 35px; /* más espacio arriba */
+/* 💫 Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌟 Separación extra para la sección 'Sobre mí' */
+.sobre-mi {
+  margin-bottom: 50px; /* Distancia entre Sobre mí y Skills */
 }
 
 
-
-
-
-
-
-
-
-
-/* Estilos generales */
-body {
-font-family: Arial, sans-serif;
-color: #221919;
-background-color: #1b1818;
-}
-
-.container {
-max-width: 800px;
-margin: 0 auto;
-padding: 40px;
-}
 
 /* Estilos para el título "Curriculum" */
 .curriculum-title {
