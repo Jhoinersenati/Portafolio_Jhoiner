@@ -7,7 +7,7 @@
 
 /* Logo */
 .logo {
-  margin-left: 0px; /* más a la izquierda */
+  margin-left: 0 px; /* más a la izquierda */
 }
 
 .logo img {
@@ -29,7 +29,7 @@
 }
 
 .navbar a {
-  color: #333;
+  color: #c20a0a;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -131,7 +131,7 @@ html {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f9f9f9;
-  color: #333;
+  color: #eeeaea;
   line-height: 1.6;
 }
 
@@ -148,9 +148,9 @@ a {
 /* CONTENEDOR GENERAL */
 /* Barra completa */
 header {
-    background-color: rgb(39, 34, 34);
+    background-color: rgb(15, 10, 10); /* color de fondo de la cabeza del menu*/
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(251, 252, 252, 0.1);
 }
 
 /* Contenedor centrado */
@@ -160,7 +160,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center; /* Todo el bloque centrado */
-    gap: 40px; /* Espacio entre logo y menú */
+    gap: 150px; /* Espacio entre logo y menú */
     padding: 5px 5px;
     font-size: 1rem;
     margin-bottom: 5px;
@@ -173,24 +173,21 @@ header {
 }
 
 /* Menú */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 10px; /* Aumentar el espacio entre elementos del menú */
-    margin: 0;
-    padding: 0;
+.menu ul {
+  display: flex;       /* Los coloca en fila */
+  gap: 8px;            /* Espacio reducido entre cada ítem */
+  margin: 0;           /* Quita margen del <ul> */
+  padding: 0;          /* Quita relleno del <ul> */
+  list-style: none;    /* Quita viñetas */
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 10;
-    transition: color 0.3s ease;
+.menu ul li a {
+  display: block;      
+  padding: 2px 5px;   /* Espacio interno reducido */
+  text-decoration: none;
+  color: #333;
 }
 
-nav ul li a:hover {
-    color: #007BFF;
-}
 
 
 
@@ -249,13 +246,13 @@ nav ul {
 nav ul li a {
   font-weight: 600;
   padding: 8px 10px;
-  color: #05000a;
+  color: #cfb5e9;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: #1eff00;
+color: #f0e222;
 }
 
 /* ICONO MENU RESPONSIVO */
@@ -295,7 +292,7 @@ nav ul li a.active {
 
 .redes a {
   margin: 0 10px;
-  color: rgb(3, 28, 48);
+  color: rgb(120, 178, 236);
   font-size: 2.0rem; 
   transition: color 0.3s ease;
 }
@@ -451,17 +448,17 @@ font-size: 1.2rem;
 .skills-bar {
   max-width: 500px;
   margin: auto;
-  background: #a09191; /* Color de fondo único */
+  background: #e5e6f1; /* Color de fondo único */
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(247, 241, 241, 0.1);
+  box-shadow: 0 5px 15px rgba(226, 219, 219, 0.1);
 }
 
 /* Título centrado */
 .skills-bar h3 {
   text-align: center;
   display: block;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 25px auto;
   color: #0f0a0a;
 }
 
@@ -477,12 +474,12 @@ font-size: 1.2rem;
 }
 
 .skill-item i {
-  color: #007BFF;
+  color: #480575;
   margin-right: 8px;
 }
 
 .progress-bar {
-  background: #eee;
+  background: #ac8383;
   border-radius: 20px;
   overflow: hidden;
   height: 25px;
@@ -490,7 +487,7 @@ font-size: 1.2rem;
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #007BFF, #00D4FF);
+  background: linear-gradient(90deg, #6d9206, #1e6775);
   color: rgb(160, 106, 106);
   font-size: 12px;
   font-weight: bold;
@@ -501,14 +498,14 @@ font-size: 1.2rem;
   transition: width 1s ease-in-out;
 }
 
-/* --- AÑADIDO --- */
+
 
 /* Título principal centrado */
 .section-title {
   text-align: center;
   font-size: 1.8em;
   font-weight: bold;
-  color: #222;
+  color: #f1e8e8;
   margin-bottom: 25px; /* separación con el contenido */
 }
 
@@ -738,141 +735,166 @@ color: #faf8f8;
 }
 
 /* Estilos para el formulario de contacto */
+/* SECCIÓN CONTACTO */
+.contact-section {
+  background: linear-gradient(135deg, #0b1014, #33302f);
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-section .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #6341b3;
+  font-weight: 700;
+  position: relative;
+}
+
+.contact-section .section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #599c49;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-item i {
+  font-size: 1.4rem;
+  color: #4f46e5;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #555;
+}
+
+.contact-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* FORMULARIO DE CONTACTO */
 .contact-form {
-max-width: 600px;
-margin: 0 auto;
+  max-width: 600px;
+  margin: auto;
 }
 
 .form-group {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.form-group input,
-.form-group textarea {
-width: 100%;
-padding: 10px;
-font-size: 16px;
-border: 1px solid #050505;
-border-radius: 4px;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #b8df0a;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-group textarea {
-height: 120px;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.2);
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 120px;
 }
 
 .btn {
-display: block;
-width: 100%;
-padding: 12px 20px;
-font-size: 16px;
-font-weight: 600;
-color: #201919;
-background-color: #edfa34;
-border: none;
-border-radius: 4px;
-cursor: pointer;
+  display: inline-block;
+  background: #4f46e5;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-background-color: #020202;
+  background: #4338ca;
+  transform: translateY(-2px);
 }
 
-
-
-
+/* FOOTER */
+footer {
+  background: #1f2937;
+  color: #fff;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
 
 footer .arriba {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #1CB698;
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -25px;
-    border-radius: 50%;
-    line-height: 50px;
-    font-size: 18px;
+  display: inline-block;
+  background: #4f46e5;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-* {
-    box-sizing: border-box;
-    font-family: 'Work Sans';
-    margin: 0;
-    padding: 0;
-}
-
-footer {
-    background-color: #252A2E;
-    color: #fff;
-    padding: 50px 0 30px 0;
-    text-align: center;
-    position: relative;
-    width: 100%;
-}
-
-.fa-solid, .fas {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-}
-
-.fa-brands, .fab {
-    font-family: "Font Awesome 6 Brands";
-    font-weight: 400;
-}
-
-.fa, .fa-brands, .fa-duotone, .fa-light, .fa-regular, .fa-solid, .fa-thin, .fab, .fad, .fal, .far, .fas, .fat {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto;
-}
-
-.fa-angle-double-up:before, .fa-angles-up:before {
-    content: "\f102";
-}
-
-.fa-facebook-f:before {
-    content: "\f39e";
-}
-
-.fa-twitter:before {
-    content: "\f099";
-}
-
-.fa-whatsapp:before {
-    content: "\f232";
-}
-
-.fa-linkedin-in:before {
-    content: "\f0e1";
-}
-
-.fa-github:before {
-    content: "\f09b";
+footer .arriba:hover {
+  background: #4338ca;
+  transform: translateY(-3px);
 }
 
 footer .redes {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
 }
 
 footer .redes a {
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 0 10px;
-    font-size: 20px;
-    transition: .3s;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
+
+footer .redes a:hover {
+  color: #60a5fa;
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
