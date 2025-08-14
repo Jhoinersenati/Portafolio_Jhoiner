@@ -859,53 +859,6 @@ color: #faf8f8;
   transform: translateY(-2px);
 }
 
-/* FOOTER */
-footer {
-  background: #1f2937;
-  color: #fff;
-  padding: 40px 20px 20px;
-  text-align: center;
-}
-
-footer .arriba {
-  display: inline-block;
-  background: #4f46e5;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-footer .arriba:hover {
-  background: #4338ca;
-  transform: translateY(-3px);
-}
-
-footer .redes {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-}
-
-footer .redes a {
-  color: #fff;
-  font-size: 1.2rem;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-footer .redes a:hover {
-  color: #60a5fa;
-  transform: scale(1.2);
-}
-
-
-
-
-
-
-
 
 
 
