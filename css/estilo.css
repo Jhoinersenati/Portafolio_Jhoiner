@@ -257,35 +257,34 @@ nav ul li a.active {
 
 .bg-icons i {
     position: absolute;
-    color: var(--primary);
-    opacity: 0.15;
+    opacity: 0.2;
     font-size: 2.5rem;
-    animation: float 20s infinite linear;
-    filter: blur(1px);
-    text-shadow: 0 0 10px var(--primary);
+    animation: float 25s infinite linear;
+    filter: blur(1.5px);
+    transition: var(--transition);
 }
 
-/* Esparcido avanzado por toda la pantalla */
-.bg-icons i:nth-child(1) { top: 5%; left: 5%; font-size: 1.5rem; animation-delay: 0s; }
-.bg-icons i:nth-child(2) { top: 15%; left: 85%; font-size: 2.2rem; animation-delay: -5s; }
-.bg-icons i:nth-child(3) { top: 75%; left: 8%; font-size: 1.8rem; animation-delay: -2s; }
-.bg-icons i:nth-child(4) { top: 45%; left: 92%; font-size: 2.5rem; animation-delay: -10s; }
-.bg-icons i:nth-child(5) { top: 25%; left: 35%; font-size: 1.2rem; animation-delay: -15s; }
-.bg-icons i:nth-child(6) { top: 85%; left: 55%; font-size: 2rem; animation-delay: -3s; }
-.bg-icons i:nth-child(7) { top: 10%; left: 55%; font-size: 1.4rem; animation-delay: -8s; }
-.bg-icons i:nth-child(8) { top: 65%; left: 38%; font-size: 2.8rem; animation-delay: -12s; }
-.bg-icons i:nth-child(9) { top: 35%; left: 12%; font-size: 1.6rem; animation-delay: -1s; }
-.bg-icons i:nth-child(10) { top: 92%; left: 88%; font-size: 2rem; animation-delay: -4s; }
-.bg-icons i:nth-child(11) { top: 55%; left: 15%; font-size: 1.3rem; animation-delay: -7s; }
-.bg-icons i:nth-child(12) { top: 20%; left: 70%; font-size: 2.4rem; animation-delay: -9s; }
-.bg-icons i:nth-child(13) { top: 80%; left: 25%; font-size: 1.1rem; animation-delay: -14s; }
-.bg-icons i:nth-child(14) { top: 40%; left: 45%; font-size: 1.7rem; animation-delay: -11s; }
+/* Esparcido aleatorio con diferentes colores y tamaños */
+.bg-icons i:nth-child(1) { top: 5%; left: 10%; color: #2563eb; text-shadow: 0 0 15px #2563eb; font-size: 1.8rem; }
+.bg-icons i:nth-child(2) { top: 15%; left: 80%; color: #f7df1e; text-shadow: 0 0 15px #f7df1e; font-size: 2.5rem; animation-delay: -5s; }
+.bg-icons i:nth-child(3) { top: 70%; left: 5%; color: #4ade80; text-shadow: 0 0 15px #4ade80; font-size: 2rem; animation-delay: -10s; }
+.bg-icons i:nth-child(4) { top: 40%; left: 90%; color: #a855f7; text-shadow: 0 0 15px #a855f7; font-size: 3rem; animation-delay: -15s; }
+.bg-icons i:nth-child(5) { top: 30%; left: 30%; color: #06b6d4; text-shadow: 0 0 15px #06b6d4; font-size: 1.5rem; animation-delay: -3s; }
+.bg-icons i:nth-child(6) { top: 85%; left: 60%; color: #f43f5e; text-shadow: 0 0 15px #f43f5e; font-size: 3.5rem; animation-delay: -8s; }
+.bg-icons i:nth-child(7) { top: 10%; left: 60%; color: #fb923c; text-shadow: 0 0 15px #fb923c; font-size: 1.2rem; animation-delay: -12s; }
+.bg-icons i:nth-child(8) { top: 55%; left: 50%; color: #ffffff; text-shadow: 0 0 15px #ffffff; font-size: 1.8rem; animation-delay: -6s; }
+.bg-icons i:nth-child(9) { top: 45%; left: 15%; color: #2ecc71; text-shadow: 0 0 15px #2ecc71; font-size: 2.2rem; animation-delay: -18s; }
+.bg-icons i:nth-child(10) { top: 80%; left: 85%; color: #e74c3c; text-shadow: 0 0 15px #e74c3c; font-size: 2.8rem; animation-delay: -4s; }
+.bg-icons i:nth-child(11) { top: 20%; left: 45%; color: #9b59b6; text-shadow: 0 0 15px #9b59b6; font-size: 1.5rem; animation-delay: -21s; }
+.bg-icons i:nth-child(12) { top: 60%; left: 25%; color: #3498db; text-shadow: 0 0 15px #3498db; font-size: 2.4rem; animation-delay: -2s; }
+.bg-icons i:nth-child(13) { top: 5%; left: 90%; color: #f1c40f; text-shadow: 0 0 15px #f1c40f; font-size: 1.3rem; animation-delay: -14s; }
+.bg-icons i:nth-child(14) { top: 90%; left: 15%; color: #1abc9c; text-shadow: 0 0 15px #1abc9c; font-size: 2rem; animation-delay: -9s; }
 
 @keyframes float {
     0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-    10% { opacity: 0.15; }
-    90% { opacity: 0.15; }
-    100% { transform: translateY(-150px) rotate(360deg); opacity: 0; }
+    20% { opacity: 0.2; }
+    80% { opacity: 0.2; }
+    100% { transform: translateY(-200px) rotate(360deg); opacity: 0; }
 }
 
 .contenedor-img {
