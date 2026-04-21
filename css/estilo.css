@@ -241,6 +241,18 @@ nav ul li a.active {
     text-align: center;
     animation: fadeIn 1s ease-out;
     z-index: 10;
+    max-width: 800px;
+}
+
+.glass-card {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 30px;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    margin: 0 20px;
 }
 
 .bg-icons {
@@ -311,18 +323,50 @@ nav ul li a.active {
 }
 
 .contenedor-img {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid var(--primary);
-    box-shadow: 0 0 30px rgba(79, 70, 229, 0.4);
-    animation: pulse 2s infinite ease-in-out;
     position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 30px;
+    z-index: 2;
+}
+
+.contenedor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 30px rgba(79, 70, 229, 0.4);
     cursor: zoom-in;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    animation: pulse-ring 2s infinite ease-out;
+    z-index: -1;
+}
+
+@keyframes pulse-ring {
+    0% { width: 100%; height: 100%; opacity: 1; }
+    100% { width: 150%; height: 150%; opacity: 0; }
+}
+
+.glass-card h1 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #60a5fa, #a855f7, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
 }
 
 /* Estado de Zoom */
@@ -403,9 +447,20 @@ nav ul li a.active {
 }
 
 .inicio h2 {
-    font-size: 1.5rem;
-    color: var(--text-dim);
-    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+    min-height: 1.5em;
+    border-right: 2px solid var(--primary);
+    display: inline-block;
+    padding-right: 5px;
+    animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary) }
 }
 
 .redes {
