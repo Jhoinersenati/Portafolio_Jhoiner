@@ -1,60 +1,121 @@
-// Script simple: menú responsive, scroll suave y manejo de formulario (simulado)
-document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn = document.getElementById('menu-btn');
-  const navList = document.getElementById('nav-list');
-  menuBtn && menuBtn.addEventListener('click', () => navList.classList.toggle('show'));
+let menuVisible = false;
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        navList.classList.remove('show');
-      }
-    });
-  });
-
-  // Modal foto ampliada
-  const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modal-img');
-  const profilePic = document.getElementById('profile-pic');
-  const closeBtn = document.getElementById('modal-close');
-
-  profilePic.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalImg.src = profilePic.src;
-    modalImg.alt = profilePic.alt;
-    modal.setAttribute('aria-hidden', 'false');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    modal.setAttribute('aria-hidden', 'true');
-  });
-
-  // Cerrar modal al hacer click fuera de la imagen
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-      modal.setAttribute('aria-hidden', 'true');
+// Función que oculta o muestra el menu
+function mostrarOcultarMenu() {
+    const nav = document.getElementById("nav");
+    if (menuVisible) {
+        nav.classList.remove("responsive");
+        menuVisible = false;
+    } else {
+        nav.classList.add("responsive");
+        menuVisible = true;
     }
-  });
-
-  // Cerrar modal con tecla ESC
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'block') {
-      modal.style.display = 'none';
-      modal.setAttribute('aria-hidden', 'true');
-    }
-  });
-});
-
-function handleContact(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = Object.fromEntries(new FormData(form).entries());
-  alert('Gracias ' + data.name + '! Tu mensaje fue recibido (simulado).');
-  form.reset();
 }
+
+// Función que aplica las animaciones de las habilidades
+function efectoHabilidades() {
+    const skills = document.getElementById("Skill-y-Otros");
+    if(!skills) return;
+    const distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+    if (distancia_skills >= 300) {
+        const habilidades = document.getElementsByClassName("progress-fill");
+        // Las animaciones se disparan por CSS gracias a la transición y el ancho definido en el HTML
+    }
+}
+
+// Scroll Spy para actualizar el link activo basado en la sección visible
+function scrollSpy() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('#nav a');
+
+    let currentSection = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 150) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href').substring(1);
+        if (href === currentSection) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Controladores de eventos
+window.onscroll = function() {
+    efectoHabilidades();
+    scrollSpy();
+    
+    // Actualizar barra de progreso
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progressBar = document.getElementById("scroll-progress");
+    if(progressBar) {
+        progressBar.style.width = scrolled + "%";
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    scrollSpy();
+
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            alert('¡Gracias ' + data.nombre + '! Tu mensaje ha sido enviado correctamente.');
+            this.reset();
+        });
+    }
+
+    // Smooth scroll y manejo de menú
+    // Smooth scroll y manejo de menú
+    document.querySelectorAll('#nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            
+            // Ocultar el menu en modo responsivo
+            document.getElementById("nav").classList.remove("responsive");
+            menuVisible = false;
+
+            if (targetId.startsWith("#")) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
+    // Efecto Zoom en la imagen de perfil
+    const imgContainer = document.querySelector('.contenedor-img');
+    if (imgContainer) {
+        const overlay = document.createElement('div');
+        overlay.className = 'zoom-overlay';
+        document.body.appendChild(overlay);
+
+        imgContainer.addEventListener('click', () => {
+            imgContainer.classList.toggle('zoomed');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = imgContainer.classList.contains('zoomed') ? 'hidden' : 'auto';
+        });
+
+        overlay.addEventListener('click', () => {
+            imgContainer.classList.remove('zoomed');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    }
+});

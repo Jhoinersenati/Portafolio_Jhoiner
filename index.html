@@ -4,31 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Jhoiner Velasco, estudiante de Ingeniería de Software con IA. Especialista en GIS, JavaScript, HTML, C++ y TypeScript.">
+    <meta name="keywords" content="Jhoiner Velasco, Ingeniería de Software, Inteligencia Artificial, SENATI, GIS, JavaScript, Desarrollo Web">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
           integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portfolio</title>
+    <title>Jhoiner Velasco | Portafolio de Ingeniería de Software</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
 <!-- MENU ENCABEZADO -->
 <header>
+    <div class="scroll-progress" id="scroll-progress"></div>
     <div class="header-container">
         <div class="logo">
-            <img src="img/descarga.svg" alt="Logo">
+            <div class="logo-box">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="70" r="12" fill="none" stroke="white" stroke-width="4"/>
+                        <line x1="38" y1="62" x2="80" y2="20" stroke="white" stroke-width="4"/>
+                        <line x1="30" y1="58" x2="30" y2="20" stroke="white" stroke-width="4"/>
+                        <circle cx="80" cy="20" r="6" fill="white"/>
+                        <circle cx="30" cy="20" r="6" fill="white"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="main-text">JHOINER</span>
+                    <span class="sub-text">Gis, JavaScript, HTML, C++, TypeScript</span>
+                </div>
+            </div>
         </div>
-        <nav>
+        <nav id="nav">
             <ul>
-                <li><a href="#inicio" class="active">INICIO</a></li>
+                <li><a href="#inicio">INICIO</a></li>
                 <li><a href="#sobremi">SOBRE MI</a></li>
                 <li><a href="#Skill-y-Otros">Skill y Otros</a></li>
                 <li><a href="#curriculum">CURRICULUM</a></li>
                 <li><a href="#portfolio">PORTAFOLIO</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
+                <li><a href="#contacto" class="btn-contacto">CONTACTO</a></li>
             </ul>
         </nav>
-        <div class="nav-responsive">
+        <div class="nav-responsive" id="nav-responsive" onclick="mostrarOcultarMenu()">
             <i class="fa-solid fa-bars"></i>
         </div>
     </div>
@@ -47,11 +64,11 @@
         <h1>Jhoiner Velasco</h1>
         <h2>Estudiante de Ingeniería de Software con Inteligencia Artificial - SENATI</h2>
         <div class="redes">
-            <a href="https://www.facebook.com/profile.php?id=100007457715142&mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://wa.me/51939311577"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/Danny-da"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
 </section>
@@ -96,60 +113,59 @@
                 </div>
             </div>
         </div>
-        <button id="boton-descarga">
-            Descargar CV <i class="fa-solid fa-download"></i>
-            <span class="overlay"></span>
-        </button>
     </div>
 </section>
 
 <!-- SECCIÓN SKILL Y OTROS -->
 <section id="Skill-y-Otros" class="skill-otros">
     <div class="contenido-seccion">
-        <h3 class="section-title">Technical Skill y Otros</h3>
-        <div class="skills-bar">
-
-            <div class="skill-item">
-                <span><i class="fas fa-code"></i> HTML & CSS</span>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 40%;"></div>
+        <h2 class="section-title">Mis Habilidades</h2>
+        <div class="skills-container">
+            <div class="skills-group">
+                <h3>Technical Skills</h3>
+                <div class="skills-bar">
+                    <div class="skill-item">
+                        <span><i class="fas fa-code"></i> HTML & CSS</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span><i class="fas fa-database"></i> Oracle Database</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span><i class="fas fa-laptop-code"></i> Java Programming</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="skill-item">
-                <span><i class="fas fa-database"></i> Oracle Database</span>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 30%;"></div>
-                </div>
-            </div>
-
-            <div class="skill-item">
-                <span><i class="fas fa-laptop-code"></i> Java Programming</span>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 25%;"></div>
-                </div>
-            </div>
-
-            <h3 class="section-title">Otros</h3>
-
-            <div class="skill-item">
-                <span><i class="fas fa-code"></i> Git and GitHub</span>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 60%;"></div>
-                </div>
-            </div>
-
-            <div class="skill-item">
-                <span><i class="fas fa-database"></i> PHP</span>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 25%;"></div>
-                </div>
-            </div>
-
-            <div class="skill-item">
-                <span><i class="fas fa-laptop-code"></i> JavaScript and Node.JS</span>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 20%;"></div>
+            <div class="skills-group">
+                <h3>Otras Habilidades</h3>
+                <div class="skills-bar">
+                    <div class="skill-item">
+                        <span><i class="fas fa-code"></i> Git and GitHub</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span><i class="fas fa-database"></i> PHP</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span><i class="fas fa-laptop-code"></i> JavaScript and Node.JS</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,8 +182,8 @@
                 <div class="item izq">
                     <h4>Primaria y Secundaria</h4>
                     <span class="casa">El Zeario Mac Donald</span>
-                    <span class="fecha">2013 - 2017/ 2018 - 2022</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                    <span class="fecha">2013 - 2022</span>
+                    <p>Formación académica completa con especial interés en las áreas de matemáticas y lógica. Durante esta etapa desarrollé las bases de mi pensamiento analítico, participando en proyectos escolares que despertaron mi curiosidad por el desarrollo de software y la tecnología.</p>
                     <div class="conectori">
                         <div class="circuloi"></div>
                     </div>
@@ -186,24 +202,29 @@
             <div class="col derecha">
                 <h3>Experiencia de trabajo</h3>
                 <div class="item der">
-                    <h4>Front Developer</h4>
-                    <span class="casa">Nombre de Compañía</span>
-                    <span class="fecha">2005 - 2008</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                    <h4>Front-End Developer (Freelance)</h4>
+                    <span class="casa">Proyectos Independientes</span>
+                    <span class="fecha">2024 - Actualidad</span>
+                    <p>Diseño y desarrollo de interfaces web modernas y adaptables (Responsive Design). Enfocado en la creación de experiencias de usuario fluidas utilizando HTML5, CSS3 y JavaScript, aplicando buenas prácticas de desarrollo para garantizar código limpio y eficiente.</p>
                     <div class="conectord">
                         <div class="circulod"></div>
                     </div>
                 </div>
                 <div class="item der">
-                    <h4>Front Developer</h4>
-                    <span class="casa">Nombre de Compañía</span>
-                    <span class="fecha">2005 - 2008</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                    <h4>Desarrollador Junior (Práctica)</h4>
+                    <span class="casa">Proyectos Académicos SENATI</span>
+                    <span class="fecha">2024 - 2025</span>
+                    <p>Colaboración en el desarrollo de aplicaciones web modulares, integrando lógica de lado del cliente y servidor. Aplicación de conocimientos en Node.js, Oracle Database y Java para resolver problemas lógicos y estructurar datos de manera profesional.</p>
                     <div class="conectord">
                         <div class="circulod"></div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="descarga-cv-container">
+            <a href="CV_Jhoiner_Velasco.pdf" download="CV_Jhoiner_Velasco.pdf" id="boton-descarga">
+                Descargar CV Completo <i class="fa-solid fa-download"></i>
+            </a>
         </div>
     </div>
 </section>
@@ -270,11 +291,11 @@
             <div class="contact-item"><i class="fas fa-envelope"></i><p>velascohilariojhoiner@gmail.com</p></div>
         </div>
 
-        <form class="contact-form">
-            <div class="form-group"><input type="text" placeholder="Nombre" required></div>
-            <div class="form-group"><input type="tel" placeholder="Teléfono" required></div>
-            <div class="form-group"><input type="email" placeholder="Correo electrónico" required></div>
-            <div class="form-group"><textarea placeholder="Mensaje" required></textarea></div>
+        <form class="contact-form" id="contact-form">
+            <div class="form-group"><input type="text" name="nombre" placeholder="Nombre" required></div>
+            <div class="form-group"><input type="tel" name="telefono" placeholder="Teléfono" required></div>
+            <div class="form-group"><input type="email" name="email" placeholder="Correo electrónico" required></div>
+            <div class="form-group"><textarea name="mensaje" placeholder="Mensaje" required></textarea></div>
             <button type="submit" class="btn">Enviar</button>
         </form>
     </div>
@@ -284,10 +305,10 @@
 <footer>
     <a href="#inicio" class="arriba"><i class="fa-solid fa-angles-up"></i></a>
     <div class="redes">
-        <a href="https://www.facebook.com/profile.php?id=100007457715142"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://wa.me/51939311577"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://github.com/Jhoinersenati"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
     </div>
 </footer>
 
