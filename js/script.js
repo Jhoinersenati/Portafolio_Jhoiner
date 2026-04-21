@@ -128,11 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i < text.length) {
             typewriterElement.innerHTML += text.charAt(i);
             i++;
-            setTimeout(speedType, 80); // Velocidad de escritura
+            setTimeout(speedType, 80);
         } else {
-            // Cuando termina, dejar el cursor parpadeando un poco y luego quitar el borde si se desea
-            // o dejarlo fijo.
-            typewriterElement.style.borderRight = "3px solid var(--accent)";
+            // Eliminar el cursor (borde derecho) cuando termine de escribir
+            typewriterElement.style.borderRight = "none";
+            typewriterElement.style.animation = "none";
         }
     }
 

@@ -295,6 +295,16 @@ nav ul li a.active {
 .bg-icons i:nth-child(28) { top: 20%; left: 95%; color: #ec4899; text-shadow: 0 0 15px #ec4899; font-size: 2.5rem; }
 .bg-icons i:nth-child(29) { top: 80%; left: 5%; color: #8b5cf6; text-shadow: 0 0 15px #8b5cf6; font-size: 1.9rem; }
 .bg-icons i:nth-child(30) { top: 48%; left: 45%; color: #f59e0b; text-shadow: 0 0 15px #f59e0b; font-size: 2.2rem; }
+.bg-icons i:nth-child(31) { top: 15%; left: 75%; color: #2ecc71; text-shadow: 0 0 15px #2ecc71; font-size: 2.5rem; }
+.bg-icons i:nth-child(32) { top: 35%; left: 82%; color: #e74c3c; text-shadow: 0 0 15px #e74c3c; font-size: 1.7rem; }
+.bg-icons i:nth-child(33) { top: 55%; left: 78%; color: #f1c40f; text-shadow: 0 0 15px #f1c40f; font-size: 2.3rem; }
+.bg-icons i:nth-child(34) { top: 75%; left: 92%; color: #9b59b6; text-shadow: 0 0 15px #9b59b6; font-size: 1.9rem; }
+.bg-icons i:nth-child(35) { top: 25%; left: 95%; color: #3498db; text-shadow: 0 0 15px #3498db; font-size: 1.5rem; }
+.bg-icons i:nth-child(36) { top: 45%; left: 85%; color: #1abc9c; text-shadow: 0 0 15px #1abc9c; font-size: 2.8rem; }
+.bg-icons i:nth-child(37) { top: 65%; left: 90%; color: #f39c12; text-shadow: 0 0 15px #f39c12; font-size: 1.2rem; }
+.bg-icons i:nth-child(38) { top: 5%; left: 85%; color: #ff5e57; text-shadow: 0 0 15px #ff5e57; font-size: 2rem; }
+.bg-icons i:nth-child(39) { top: 85%; left: 75%; color: #485ef4; text-shadow: 0 0 15px #485ef4; font-size: 1.4rem; }
+.bg-icons i:nth-child(40) { top: 50%; left: 95%; color: #00d8d6; text-shadow: 0 0 15px #00d8d6; font-size: 2.1rem; }
 
 @keyframes float {
     0% { transform: translateY(0) rotate(0deg); opacity: 0; }
