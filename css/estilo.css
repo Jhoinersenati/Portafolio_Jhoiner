@@ -237,8 +237,48 @@ nav ul li a.active {
 }
 
 .contenido-banner {
+    position: relative;
     text-align: center;
     animation: fadeIn 1s ease-out;
+    z-index: 10;
+}
+
+/* Iconos Flotantes de Fondo */
+.bg-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.bg-icons i {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.05); /* Muy sutil */
+    font-size: 2.5rem;
+    animation: float 15s infinite linear;
+}
+
+/* Posiciones aleatorias para los iconos */
+.bg-icons i:nth-child(1) { top: 10%; left: 10%; animation-duration: 12s; }
+.bg-icons i:nth-child(2) { top: 20%; left: 80%; animation-duration: 18s; }
+.bg-icons i:nth-child(3) { top: 70%; left: 15%; animation-duration: 15s; }
+.bg-icons i:nth-child(4) { top: 50%; left: 85%; animation-duration: 20s; }
+.bg-icons i:nth-child(5) { top: 30%; left: 40%; animation-duration: 14s; }
+.bg-icons i:nth-child(6) { top: 80%; left: 60%; animation-duration: 16s; }
+.bg-icons i:nth-child(7) { top: 15%; left: 60%; animation-duration: 19s; }
+.bg-icons i:nth-child(8) { top: 60%; left: 40%; animation-duration: 13s; }
+.bg-icons i:nth-child(9) { top: 40%; left: 10%; animation-duration: 17s; }
+.bg-icons i:nth-child(10) { top: 85%; left: 90%; animation-duration: 21s; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    20% { opacity: 0.5; }
+    80% { opacity: 0.5; }
+    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
 }
 
 .contenedor-img {
