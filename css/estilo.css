@@ -257,9 +257,11 @@ nav ul li a.active {
 
 .bg-icons i {
     position: absolute;
-    color: rgba(255, 255, 255, 0.05); /* Muy sutil */
-    font-size: 2.5rem;
+    color: var(--primary); /* Blue color */
+    opacity: 0.2; /* Increased opacity */
+    font-size: 3rem;
     animation: float 15s infinite linear;
+    filter: blur(1px);
 }
 
 /* Posiciones aleatorias para los iconos */
