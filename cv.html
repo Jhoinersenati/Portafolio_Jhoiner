@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Jhoiner Velasco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #f1f5f9; padding: 40px 20px; color: var(--text-dark); display: flex; justify-content: center; }
+        .cv-page { background: white; width: 210mm; min-height: 297mm; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
+        header { display: flex; border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 30px; }
+        .header-info { flex: 1; }
+        .header-info h1 { font-size: 2.5rem; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
+        .header-info p { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-top: 5px; }
+        .contact-info { display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--text-light); }
+        .contact-info div i { width: 20px; color: var(--accent); }
+        
+        .section { margin-bottom: 30px; }
+        .section-title { font-size: 1.3rem; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 10px; margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .item { margin-bottom: 20px; }
+        .item h4 { font-size: 1.1rem; color: var(--primary); }
+        .item .meta { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-light); margin: 5px 0; font-style: italic; }
+        .item p { font-size: 0.9rem; line-height: 1.5; color: var(--text-dark); text-align: justify; }
+        
+        .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { background: #e2e8f0; color: var(--primary); padding: 5px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+        
+        @media print {
+            body { padding: 0; background: white; }
+            .cv-page { box-shadow: none; width: 100%; border: none; }
+            .no-print { display: none; }
+        }
+
+        .no-print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .no-print-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6); }
+    </style>
+</head>
+<body>
+    <button class="no-print-btn" onclick="window.print()">Imprimir / Guardar PDF <i class="fa-solid fa-print"></i></button>
+
+    <div class="cv-page">
+        <header>
+            <div class="header-info">
+                <h1>Jhoiner Velasco</h1>
+                <p>Ingeniero de Software con Inteligencia Artificial</p>
+            </div>
+            <div class="contact-info">
+                <div><i class="fa-solid fa-envelope"></i> velascohilariojhoiner@gmail.com</div>
+                <div><i class="fa-solid fa-location-dot"></i> Las Lomas / Pampa Chica, Perú</div>
+                <div><i class="fa-brands fa-github"></i> github.com/Jhoiner-da</div>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2 class="section-title">Sobre Mí</h2>
+            <p style="line-height: 1.6; color: var(--text-dark);">Estudiante apasionado de Ingeniería de Software en SENATI con especialización en Inteligencia Artificial. Me enfoco en desarrollar soluciones tecnológicas eficientes, modernas y seguras. Mi objetivo es aplicar mis conocimientos técnicos en proyectos del mundo real mientras continúo expandiendo mis habilidades en el desarrollo Full-Stack.</p>
+        </div>
+
+        <div class="grid">
+            <div class="left-col">
+                <div class="section">
+                    <h2 class="section-title">Experiencia Laboral</h2>
+                    <div class="item">
+                        <h4>Front-End Developer (Freelance)</h4>
+                        <div class="meta">
+                            <span>Proyectos Independientes</span>
+                            <span>2024 - Actualidad</span>
+                        </div>
+                        <p>Diseño y desarrollo de interfaces web modernas y adaptables. Implementación de experiencias de usuario fluidas utilizando HTML5, CSS3 y JavaScript puro.</p>
+                    </div>
+                    <div class="item">
+                        <h4>Desarrollador Junior (Práctica)</h4>
+                        <div class="meta">
+                            <span>Proyectos Académicos SENATI</span>
+                            <span>2024 - 2025</span>
+                        </div>
+                        <p>Colaboración en el desarrollo de aplicaciones web modulares, integrando lógica de cliente y servidor con Node.js y bases de datos Oracle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <div class="section">
+                    <h2 class="section-title">Educación</h2>
+                    <div class="item">
+                        <h4>Ingeniería de Software con IA</h4>
+                        <div class="meta">
+                            <span>SENATI</span>
+                            <span>2024 - 2026</span>
+                        </div>
+                        <p>Formación técnica especializada en arquitectura de software, algoritmos de IA y desarrollo de sistemas escalables.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <div class="skills">
+                        <span class="skill-tag">HTML5 / CSS3</span>
+                        <span class="skill-tag">JavaScript / TypeScript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Oracle Database</span>
+                        <span class="skill-tag">Java / C++</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Idiomas</h2>
+                    <p>Español (Nativo) | Inglés (Intermedio)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
