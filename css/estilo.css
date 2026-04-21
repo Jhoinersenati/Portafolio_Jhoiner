@@ -257,18 +257,17 @@ nav ul li a.active {
 
 .bg-icons i {
     position: absolute;
-    opacity: 0.2;
+    opacity: 0.25;
     font-size: 2.5rem;
-    animation: float 25s infinite linear;
-    filter: blur(1.5px);
+    animation: float 12s infinite ease-in-out;
+    filter: blur(1.2px);
     transition: var(--transition);
 }
 
-/* Colores y posiciones para 30+ iconos */
 .bg-icons i:nth-child(1) { top: 5%; left: 5%; color: #2563eb; text-shadow: 0 0 15px #2563eb; font-size: 1.5rem; }
 .bg-icons i:nth-child(2) { top: 12%; left: 88%; color: #f7df1e; text-shadow: 0 0 15px #f7df1e; font-size: 2.2rem; animation-delay: -5s; }
-.bg-icons i:nth-child(3) { top: 75%; left: 2%; color: #4ade80; text-shadow: 0 0 15px #4ade80; font-size: 1.8rem; animation-delay: -10s; }
-.bg-icons i:nth-child(4) { top: 40%; left: 95%; color: #a855f7; text-shadow: 0 0 15px #a855f7; font-size: 2.5rem; animation-delay: -15s; }
+.bg-icons i:nth-child(3) { top: 75%; left: 1%; color: #4ade80; text-shadow: 0 0 15px #4ade80; font-size: 1.8rem; animation-delay: -10s; }
+.bg-icons i:nth-child(4) { top: 40%; left: 96%; color: #a855f7; text-shadow: 0 0 15px #a855f7; font-size: 2.5rem; animation-delay: -15s; }
 .bg-icons i:nth-child(5) { top: 28%; left: 32%; color: #06b6d4; text-shadow: 0 0 15px #06b6d4; font-size: 1.2rem; animation-delay: -3s; }
 .bg-icons i:nth-child(6) { top: 88%; left: 58%; color: #f43f5e; text-shadow: 0 0 15px #f43f5e; font-size: 3rem; animation-delay: -8s; }
 .bg-icons i:nth-child(7) { top: 8%; left: 52%; color: #fb923c; text-shadow: 0 0 15px #fb923c; font-size: 1.4rem; animation-delay: -12s; }
@@ -279,38 +278,37 @@ nav ul li a.active {
 .bg-icons i:nth-child(12) { top: 58%; left: 22%; color: #3498db; text-shadow: 0 0 15px #3498db; font-size: 2.1rem; animation-delay: -2s; }
 .bg-icons i:nth-child(13) { top: 12%; left: 15%; color: #f1c40f; text-shadow: 0 0 15px #f1c40f; font-size: 1.3rem; animation-delay: -14s; }
 .bg-icons i:nth-child(14) { top: 92%; left: 12%; color: #1abc9c; text-shadow: 0 0 15px #1abc9c; font-size: 1.7rem; animation-delay: -9s; }
-.bg-icons i:nth-child(15) { top: 50%; left: 5%; color: #82ccdd; text-shadow: 0 0 15px #82ccdd; font-size: 2.4rem; }
+.bg-icons i:nth-child(15) { top: 50%; left: 1%; color: #82ccdd; text-shadow: 0 0 15px #82ccdd; font-size: 2.4rem; }
 .bg-icons i:nth-child(16) { top: 25%; left: 75%; color: #60a5fa; text-shadow: 0 0 15px #60a5fa; font-size: 1.5rem; }
-.bg-icons i:nth-child(17) { top: 65%; left: 85%; color: #f97316; text-shadow: 0 0 15px #f97316; font-size: 2.1rem; }
+.bg-icons i:nth-child(17) { top: 65%; left: 90%; color: #f97316; text-shadow: 0 0 15px #f97316; font-size: 2.1rem; }
 .bg-icons i:nth-child(18) { top: 15%; left: 25%; color: #4ade80; text-shadow: 0 0 15px #4ade80; font-size: 1.2rem; }
 .bg-icons i:nth-child(19) { top: 85%; left: 35%; color: #fde047; text-shadow: 0 0 15px #fde047; font-size: 1.9rem; }
-.bg-icons i:nth-child(20) { top: 45%; left: 65%; color: #c084fc; text-shadow: 0 0 15px #c084fc; font-size: 2.6rem; }
-.bg-icons i:nth-child(21) { top: 35%; left: 88%; color: #2dd4bf; text-shadow: 0 0 15px #2dd4bf; font-size: 1.4rem; }
+.bg-icons i:nth-child(20) { top: 45%; left: 75%; color: #c084fc; text-shadow: 0 0 15px #c084fc; font-size: 2.6rem; }
+.bg-icons i:nth-child(21) { top: 35%; left: 95%; color: #2dd4bf; text-shadow: 0 0 15px #2dd4bf; font-size: 1.4rem; }
 .bg-icons i:nth-child(22) { top: 72%; left: 52%; color: #fb7185; text-shadow: 0 0 15px #fb7185; font-size: 2rem; }
 .bg-icons i:nth-child(23) { top: 5%; left: 35%; color: #67e8f9; text-shadow: 0 0 15px #67e8f9; font-size: 1.1rem; }
-.bg-icons i:nth-child(24) { top: 95%; left: 75%; color: #f472b6; text-shadow: 0 0 15px #f472b6; font-size: 2.3rem; }
-.bg-icons i:nth-child(25) { top: 55%; left: 95%; color: #facc15; text-shadow: 0 0 15px #facc15; font-size: 1.6rem; }
-.bg-icons i:nth-child(26) { top: 30%; left: 5%; color: #3b82f6; text-shadow: 0 0 15px #3b82f6; font-size: 2.8rem; }
+.bg-icons i:nth-child(24) { top: 95%; left: 85%; color: #f472b6; text-shadow: 0 0 15px #f472b6; font-size: 2.3rem; }
+.bg-icons i:nth-child(25) { top: 55%; left: 92%; color: #facc15; text-shadow: 0 0 15px #facc15; font-size: 1.6rem; }
+.bg-icons i:nth-child(26) { top: 30%; left: 1%; color: #3b82f6; text-shadow: 0 0 15px #3b82f6; font-size: 2.8rem; }
 .bg-icons i:nth-child(27) { top: 60%; left: 10%; color: #10b981; text-shadow: 0 0 15px #10b981; font-size: 1.3rem; }
-.bg-icons i:nth-child(28) { top: 20%; left: 95%; color: #ec4899; text-shadow: 0 0 15px #ec4899; font-size: 2.5rem; }
-.bg-icons i:nth-child(29) { top: 80%; left: 5%; color: #8b5cf6; text-shadow: 0 0 15px #8b5cf6; font-size: 1.9rem; }
+.bg-icons i:nth-child(28) { top: 20%; left: 98%; color: #ec4899; text-shadow: 0 0 15px #ec4899; font-size: 2.5rem; }
+.bg-icons i:nth-child(29) { top: 80%; left: 1%; color: #8b5cf6; text-shadow: 0 0 15px #8b5cf6; font-size: 1.9rem; }
 .bg-icons i:nth-child(30) { top: 48%; left: 45%; color: #f59e0b; text-shadow: 0 0 15px #f59e0b; font-size: 2.2rem; }
-.bg-icons i:nth-child(31) { top: 15%; left: 75%; color: #2ecc71; text-shadow: 0 0 15px #2ecc71; font-size: 2.5rem; }
-.bg-icons i:nth-child(32) { top: 35%; left: 82%; color: #e74c3c; text-shadow: 0 0 15px #e74c3c; font-size: 1.7rem; }
-.bg-icons i:nth-child(33) { top: 55%; left: 78%; color: #f1c40f; text-shadow: 0 0 15px #f1c40f; font-size: 2.3rem; }
-.bg-icons i:nth-child(34) { top: 75%; left: 92%; color: #9b59b6; text-shadow: 0 0 15px #9b59b6; font-size: 1.9rem; }
-.bg-icons i:nth-child(35) { top: 25%; left: 95%; color: #3498db; text-shadow: 0 0 15px #3498db; font-size: 1.5rem; }
-.bg-icons i:nth-child(36) { top: 45%; left: 85%; color: #1abc9c; text-shadow: 0 0 15px #1abc9c; font-size: 2.8rem; }
-.bg-icons i:nth-child(37) { top: 65%; left: 90%; color: #f39c12; text-shadow: 0 0 15px #f39c12; font-size: 1.2rem; }
-.bg-icons i:nth-child(38) { top: 5%; left: 85%; color: #ff5e57; text-shadow: 0 0 15px #ff5e57; font-size: 2rem; }
-.bg-icons i:nth-child(39) { top: 85%; left: 75%; color: #485ef4; text-shadow: 0 0 15px #485ef4; font-size: 1.4rem; }
-.bg-icons i:nth-child(40) { top: 50%; left: 95%; color: #00d8d6; text-shadow: 0 0 15px #00d8d6; font-size: 2.1rem; }
+.bg-icons i:nth-child(31) { top: 15%; left: 80%; color: #2ecc71; text-shadow: 0 0 15px #2ecc71; font-size: 2.5rem; }
+.bg-icons i:nth-child(32) { top: 35%; left: 85%; color: #e74c3c; text-shadow: 0 0 15px #e74c3c; font-size: 1.7rem; }
+.bg-icons i:nth-child(33) { top: 55%; left: 82%; color: #f1c40f; text-shadow: 0 0 15px #f1c40f; font-size: 2.3rem; }
+.bg-icons i:nth-child(34) { top: 75%; left: 95%; color: #9b59b6; text-shadow: 0 0 15px #9b59b6; font-size: 1.9rem; }
+.bg-icons i:nth-child(35) { top: 25%; left: 92%; color: #3498db; text-shadow: 0 0 15px #3498db; font-size: 1.5rem; }
+.bg-icons i:nth-child(36) { top: 45%; left: 88%; color: #1abc9c; text-shadow: 0 0 15px #1abc9c; font-size: 2.8rem; }
+.bg-icons i:nth-child(37) { top: 65%; left: 98%; color: #f39c12; text-shadow: 0 0 15px #f39c12; font-size: 1.2rem; }
+.bg-icons i:nth-child(38) { top: 5%; left: 92%; color: #ff5e57; text-shadow: 0 0 15px #ff5e57; font-size: 2rem; }
+.bg-icons i:nth-child(39) { top: 85%; left: 80%; color: #485ef4; text-shadow: 0 0 15px #485ef4; font-size: 1.4rem; }
+.bg-icons i:nth-child(40) { top: 50%; left: 92%; color: #00d8d6; text-shadow: 0 0 15px #00d8d6; font-size: 2.1rem; }
 
 @keyframes float {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-    20% { opacity: 0.2; }
-    80% { opacity: 0.2; }
-    100% { transform: translateY(-200px) rotate(360deg); opacity: 0; }
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-40px) rotate(15deg); }
+    100% { transform: translateY(0) rotate(0deg); }
 }
 
 .contenedor-img {
