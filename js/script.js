@@ -118,4 +118,25 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'auto';
         });
     }
+
+    // Efecto Typewriter (Máquina de escribir)
+    const text = "Estudiante de Ingeniería de Software con Inteligencia Artificial - SENATI";
+    const typewriterElement = document.getElementById("typewriter");
+    let i = 0;
+
+    function speedType() {
+        if (i < text.length) {
+            typewriterElement.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(speedType, 80); // Velocidad de escritura
+        } else {
+            // Cuando termina, dejar el cursor parpadeando un poco y luego quitar el borde si se desea
+            // o dejarlo fijo.
+            typewriterElement.style.borderRight = "3px solid var(--accent)";
+        }
+    }
+
+    if (typewriterElement) {
+        setTimeout(speedType, 1000); // Empezar después de 1 segundo
+    }
 });
